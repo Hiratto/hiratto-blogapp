@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @title = "ブログアプリ"
-    @article = Article.first
+    @title = "Hiratto Blog"
+    @article = Article.all
   end
 
   def about
-    @title = "ブログアプリ"
+    @title = "Hiratto Blog"
   end
 end

@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @title = "Hiratto Blog"
-    @article = Article.all
+    @article = Article.first
   end
 
   def about

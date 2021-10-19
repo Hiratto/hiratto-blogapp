@@ -3,5 +3,7 @@ class ArticlesController < ApplicationController
     @title = "Hiratto Blog"
     @articles = Article.all
   end
-
+  def show
+    @article = Article.find(params[:id])
+  end
 end

@@ -27,7 +27,9 @@ $avatar-size: 32px;
     }
 
     &_actions {
-      right: 0px;
+      // 編集・削除ボタンの位置変更＞右上端から
+      right: 20px;
+      top: 20px;
       position: absolute;
     }
   }

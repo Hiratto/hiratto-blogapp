@@ -2,12 +2,12 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update]
 
   def index
-    @title = "Hiratto Blog"
+    @title = 'Hiratto Blog'
     @articles = Article.all
   end
 
   def show
-    
+
   end
 
   def new
@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def update

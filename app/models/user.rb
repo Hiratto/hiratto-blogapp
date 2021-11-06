@@ -22,6 +22,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  delegate :birthday, :gender, to: :profile, allow_nil: true
+  
   has_many :articles, dependent: :destroy
   has_one :profile, dependent: :destroy
 
@@ -30,8 +32,16 @@ class User < ApplicationRecord
   end
 
   def display_name
-    self.email.split('@').first
+    profile&.nickname || self.email.split('@').first
   end
+
+  # def birthday
+  #   profile&.birthday
+  # end
+
+  # def gender
+  #   profile&.gender
+  # end
 
   def prepare_profile
     profile || build_profile

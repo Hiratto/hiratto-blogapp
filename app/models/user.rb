@@ -22,7 +22,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  delegate :birthday, :gender, to: :profile, allow_nil: true
+  delegate :birthday,:age, :gender, to: :profile, allow_nil: true
   
   has_many :articles, dependent: :destroy
   has_one :profile, dependent: :destroy

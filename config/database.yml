@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  database: blogapp_development
+  database: hirattoblogapp
 
 test:
   <<: *default
@@ -15,7 +15,7 @@ test:
 
 production:
   <<: *default
-  database: hirattoblogapp
-  username: hiratto-blogapp
+  database: blogapp_production
+  username: hirattoblogapp
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: <%= ENV['DATABASE_HOST'] %>

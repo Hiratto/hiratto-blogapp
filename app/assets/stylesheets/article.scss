@@ -36,6 +36,7 @@ $container-padding: 16px;
 
   &_comment {
     padding: 12px 0;
+
   }
 
   &_detail {
@@ -43,6 +44,7 @@ $container-padding: 16px;
     display: flex;
     font-size: 12px;
     position: relative;
+    
     
     img {
       cursor: pointer;
